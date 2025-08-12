@@ -4,7 +4,7 @@ Leandro Fernandes - MSc Thesis
 Conducted at Laboratory of Systems and Synthetic Biology, Wageningen University & Research
 
 ## Infer Gene Regulatory Networks
-- '''Filtering10_000.R''' :  Filter and format datasets for downstream processing. Only select the top 10,000 most variable genes
+- ```Filtering10_000.R``` :  Filter and format datasets for downstream processing. Only select the top 10,000 most variable genes
 - NetworkImputation&Inference.R :  Impute datasets and process for network inference using ARACNE, CLR and MRNET techniques
 - call_total.sh :  Call NetworkImputation&Inference.R script for all datasets
 - GENIE3_Inference.R :  Network inference using the GENIE3 technique
