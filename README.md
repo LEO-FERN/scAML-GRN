@@ -20,6 +20,9 @@ Script | Description
 ## Network Analysis
 Script | Description
 --- | ---
+```BinaryStats_V2.py``` | Calculate descriptive statistics for patient cell type consensus networks
+```PCA_ConsensusStats.py``` | Perform PCA on the statistics generated from ```BinaryStats_V2.py```
+```UMAP_Vector.py``` | Perform UMAP on vectorized patient cell type consensus networks
 
 ## Single Cell Networks
 
