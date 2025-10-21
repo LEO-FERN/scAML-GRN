@@ -25,6 +25,25 @@ Script | Description
 ```UMAP_Vector.py``` | Perform UMAP on vectorized patient cell type consensus networks
 
 ## Single Cell Networks
-
+Script | Description
+--- | ---
+```TopGenes.py``` | Identifies the top 1000 "most connected" genes for different cell types
+```FilterData.py``` | Filters gene count data based on output of ```TopGenes.py```
+```LIONESS.R``` | Runs the LIONESS algorithm to infer single-cell sample-specifc gene regulatory networks
+```UMAP_scVector.py``` | Perform UMAP on vectorized patient single-cell sample-specific networks using output of ```LIONESS.R```
+```KNN_scVector_CV.py``` | Train KNN with 5-fold cross-validation to predict patient ID based on single-cell sample-specific networks
+```SVM_scVector_CV.py``` | Train SVM with 5-fold cross-validation to predict patient ID based on single-cell sample-specific networks
+```RF_scVector_CV2.py``` | Train RF with 5-fold cross-validation to predict patient ID based on single-cell sample-specific networks
+```ClassificationCombinedHeatmaps.py``` | Generate heatmaps showing classifcation results of KNN, SVM and RF models for each cell type
 
 ## Enrichment Analysis
+Script | Description
+--- | ---
+```Top1000Enrich.R``` | Pathway Enrichment Analysis to determine which biological pathways are over represented in the top 1000 most connected genes from ```TopGenes.py```
+```TopGenesPatients.py``` | Identifies the top 2500 most connected genes for each individual patient's consensus network across all three cell types
+```Top2500Enrich.R``` | Pathway Enrichment Analysis to determine which biological pathways are over represented in each patient's most connected genes
+```GeneMapping.py``` | Creates mapping index explaining what features are in what order in vectorized networks
+```TopImportantGenes.R``` | Identifies which specific gene-gene interactions were the most important for predicting Patient IDs in RF models using index from ```GeneMapping.py```
+```ImportantGenesEnrich.R``` | Pathway Enrichment Analysis to determine which biological pathways are over represented in the most important genes for each cell type RF model (```TopImportantGenes.R```)
+```PatientPathwaysHeatmap2.py``` | Creates Heatmaps to display the results of ```Top2500Enrich.R```
+```PathwayHeatmap.py``` | Creates Heatmaps to display the results of ```Top1000Enrich.R``` and ```ImportantGenesEnrich.R```
